@@ -89,7 +89,7 @@ int cuimain(int argc, char *argv[])
     edit.od = mi->od;
     edit.ar = mi->ar;
 
-    edit.scale_ar = edit.scale_od = true;
+    edit.scale_ar = edit.scale_od = false;
     edit.cap_ar = edit.cap_od = false;
     edit.makezip = osumem;
 

@@ -38,12 +38,12 @@ Fl_Window* CosuUI::make_window()
             {
                 scale_ar = new Fl_Check_Button(210, 248, 170, 22, "Scale AR");
                 scale_ar->down_box(FL_DOWN_BOX);
-                scale_ar->value(1);
+                scale_ar->value(0);
             } // Fl_Check_Button* scale_ar
             {
                 scale_od = new Fl_Check_Button(210, 271, 170, 22, "Scale OD");
                 scale_od->down_box(FL_DOWN_BOX);
-                scale_od->value(1);
+                scale_od->value(0);
             } // Fl_Check_Button* scale_od
             {
                 pitch = new Fl_Check_Button(210, 294, 170, 22, "Adjust Pitch");
