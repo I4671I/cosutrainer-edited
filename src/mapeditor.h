@@ -128,7 +128,7 @@ struct editpass // temporary data that's only needed in editing (only passed wit
 
 #define BPM_MODE_VAR "COSU_BPM_MODE"
 
-#define GET_DEFAULT_BPM_MODE() ((getenv(BPM_MODE_VAR) && strcmp(getenv(BPM_MODE_VAR), "main") == 0) ? main_bpm_mode : max_bpm_mode)
+#define GET_DEFAULT_BPM_MODE() ((getenv(BPM_MODE_VAR) && strcmp(getenv(BPM_MODE_VAR), "max") == 0) ? max_bpm_mode : main_bpm_mode)
 
 #define BTLEN_BPM(x) (1.0 / (x) * 1000.0 * 60.0)
 
