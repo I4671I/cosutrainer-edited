@@ -1151,7 +1151,15 @@ static int convert_map(char *line, void *vinfo, enum SECTION sect)
                 else if (_CMPSTR(cur, "@rate@") || _CMPSTR(cur, "@RATE@"))
                 {
                     if (disprate != 1.0 || CMPSTR(cur, "@RATE@"))
-                        snpedit("%.2lfx", disprate);
+                    {
+                        char ratebuf[32];
+                        snprintf(ratebuf, sizeof(ratebuf), "%.2lf", disprate);
+                        int rlen = strlen(ratebuf);
+                        while (rlen > 1 && ratebuf[rlen - 1] == '0') rlen--;
+                        if (ratebuf[rlen - 1] == '.') rlen--;
+                        ratebuf[rlen] = '\0';
+                        snpedit("%sx", ratebuf);
+                    }
                 }
                 else if (_CMPSTR(cur, "@bpm@") || _CMPSTR(cur, "@BPM@"))
                 {
